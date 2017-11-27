@@ -1,0 +1,11 @@
+body, html{
+	width:  100%;
+	margin: 0;
+	padding: 0;
+}
+
+#seriousSam{
+	width: 25vh;
+	position: absolute
+}
+
