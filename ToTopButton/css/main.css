@@ -1,0 +1,23 @@
+body{
+	
+	background-color: gray;
+}
+#toTopButton{
+	background: teal;
+	width: 150px;
+	height: 50px;
+	padding: 10px;
+	text-align: center;
+	position: fixed;
+	bottom: 15px;
+	right: 15px;
+	opacity: 0.8;
+	display: none;
+	
+}
+
+#toTopButton:hover
+{
+	opacity: 1;
+	color: #b3eb49;
+}
