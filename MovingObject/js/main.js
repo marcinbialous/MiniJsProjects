@@ -1,21 +1,31 @@
+function movingImg(e, objToMove){
+	objToMove.style.left = e.clientX - objToMove.width / 2 + "px";
+	objToMove.style.top = e.clientY  - objToMove.height / 2  + "px";
+}
+
+
 window.onload = function(){
 	
 	var serious = document.getElementById("seriousSam")
 	
 	serious.onmousedown = function(){
 		
-		serious.onmousemove = function(e){
+		var save = this;
+		
+		document.onmousemove = function(e){
 			
-			this.style.left = e.clientX - this.width / 2 + "px";
-			this.style.top = e.clientY  - this.height / 2  + "px";
+			movingImg(e, save);
+			
 			};
 		};
 		
-		serious.onmouseup = function(){
+		document.onmouseup = function(){
 			
 			this.onmousemove = null;
 		};
 			
+	//wyłącza podstawowe, wbudowane właściwości.
+	
 		serious.ondragstart = function(e)
 		{
 		
